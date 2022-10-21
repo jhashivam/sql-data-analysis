@@ -183,14 +183,37 @@ FROM
 ```
 20. How many annual contracts with a value higher than or equal to $100,000 have been registered in the salaries table?
 ```sql
-
+SELECT 
+    COUNT(*)
+FROM
+    salaries
+WHERE
+    salary >= 100000;
 ```
 21. How many managers do we have in the “employees” database?
+```sql
+SELECT 
+    COUNT(*)
+FROM
+    dept_manager; 
+```
 22. Select all data from the "employees" table, ordering it by "hire date" in descending order.
-23. Write a query that obtains two columns. The first column must contain annual salaries higher than 80,000 dollars. 
+```sql
+
+```
+23. Write a query that obtains two columns. The first column must contain annual salaries higher than 80,000 dollars.
+```sql
+
+``` 
     The second column, renamed to "emps_with_same_salary", must show the number of employees contracted to that salary. Lastly, sort the output by the first column.
 24. Select all employees whose average salary is higher than $120,000 per annum.
+```sql
+
+```
 25. Select the first 100 rows from the 'dept_emp' table.
+```sql
+
+```
 26. Task 1:
     a. Select ten records from the “titles” table to get a better idea about its content.
     b. Then, in the same table, insert information about employee number 999903. State that he/she is a “Senior Engineer”, who has started working in this position on October 1st, 1997.
