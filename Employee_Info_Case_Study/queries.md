@@ -176,7 +176,10 @@ WHERE
 ```
 19. Obtain a list with all different "hire dates" from the "employees" table.
 ```sql
-
+SELECT DISTINCT
+    (hire_date)
+FROM
+    employees;
 ```
 20. How many annual contracts with a value higher than or equal to $100,000 have been registered in the salaries table?
 ```sql
