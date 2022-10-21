@@ -1,15 +1,93 @@
 1. Select the information from the "dept_no" column of the "departments" table. Select all data from the "departments" table.
+
+```
+SELECT 
+    dept_no
+FROM
+    departments;
+
+SELECT 
+    *
+FROM
+    departments;
+
+```
+
 2. Select all people from the "employees" table whose first name is "Elvis".
+```
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    first_name = 'Elvis';
+
+```
 3. Retrieve a list with all female employees whose first name is Kellie.
+```
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    first_name = 'Kellie'
+        AND gender = 'F';
+
+```
 4. Retrieve a list with all employees whose first name is either Kellie or Aruna.
+```
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    first_name = 'Kellie'
+        OR first_name = 'Aruna';
+
+```
 5. Retrieve a list with all female employees whose first name is either Kellie or Aruna.
+```
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    (first_name = 'Kellie'
+        OR first_name = 'Aruna') AND gender = 'F';
+```
 6. Use the IN operator to select all individuals from the “employees” table, whose first name is either “Denis”, or “Elvis”.
+```
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    first_name IN ("Denis","Elvis");
+```
 7. Extract all records from the ‘employees’ table, aside from those with employees named John, Mark, or Jacob.
+```
+
+```
 8. Select the data about all individuals, whose first name starts with "Mark", specify that the name can be succeeded by any sequence of characters.
+```
+
+```
 9. Retrieve a list with all employees who have been hired in the year 2000.
+```
+
+```
 10. Retrieve a list with all employees whose employee number is written with 5 characters, and starts with "1000".
+```
+
+```
 11. Extract all individuals from the "employees" table whose first name contains "Jack".
+```
+
+```
 12. Extract list containing the names of employees that do not contain "Jack".
+```
+
+```
 13. Select all the information from the "salaries" table regarding contracts from 66,000 to 70,000 dollars per year.
 14. Retrieve a list with all individuals whose employee number is not between "10004" and "10012".
 15. Select the names of all departments with numbers between "d003" and "d006".
