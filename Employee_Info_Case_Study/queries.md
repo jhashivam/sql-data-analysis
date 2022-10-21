@@ -199,13 +199,23 @@ FROM
 ```
 22. Select all data from the "employees" table, ordering it by "hire date" in descending order.
 ```sql
-
+SELECT 
+    *
+FROM
+    employees
+ORDER BY hire_date DESC;
 ```
-23. Write a query that obtains two columns. The first column must contain annual salaries higher than 80,000 dollars.
+23. Write a query that obtains two columns. The first column must contain annual salaries higher than `80,000` dollars.The second column, renamed to `emps_with_same_salary`, must show the number of employees contracted to that salary. Lastly, sort the output by the first column.
 ```sql
-
+SELECT 
+    salary, COUNT(salary) AS emps_with_same_salary
+FROM
+    salaries
+WHERE
+    salary > 80000
+GROUP BY salary
+ORDER BY salary;
 ``` 
-    The second column, renamed to "emps_with_same_salary", must show the number of employees contracted to that salary. Lastly, sort the output by the first column.
 24. Select all employees whose average salary is higher than $120,000 per annum.
 ```sql
 
@@ -246,29 +256,7 @@ FROM
 50. Extract a dataset containing the following information about the managers: employee number, first name, and last name. Add two columns at the end – one showing the difference between the maximum and minimum salary of that employee, and another one saying whether this salary raise was higher than $30,000 or NOT.
 
 ```sql
-  1. select dept_no from departments;
-  2. select * from employees where first_name = "Elvis";
-  3. select first_name, last_name from employees where first_name = "Kellie" and gender="F";
-  4. select first_name, last_name from employees where first_name = "Kellie" or first_name = "Aruna";
-  5. select 
-        first_name, last_name from employees 
-        where gender = 'F' and (first_name = "Kellie" or first_name = "Aruna");
-  6. select first_name, last_name from employees where first_name IN ("Denis", "Elvis");
-  7. select * from employees where first_name NOT IN ("John", "Mark", "Jacob");
-  8. select * from employees where first_name like "Mark%";
-  9. select * from employees where hire_date like ("%2000%");
-  10. select * from employees where emp_no like "1000_";
-  11. select * from employees where first_name like "Jack%";
-  12. select * from employees where fist_name not like "%Jack%";
-  13. select * from salaries where salary BETWEEN 60000 AND 70000;
-  14. select * from employees where emp_no BETWEEN 10004 and 10012;
-  15. select dept_name from departments where dept_no BETWEEN "d003" and "d006";
-  16. select dept_name from departments where dept_no is not null;
-  17. select * from employees where gender = 'F' and hire_date > "2000-01-01";
-  18. select * from salaries where salary > 150000; 
-  19. select DISTINCT (hire_date) from Employees;
-  20. select count(*) from salaries where salary >= 100000;
-  21. select count(*) from dept_manager;
+
   22. select * from employees order by hire_date DESC;
   23. select 
         salary, count(salary) as emps_with_same_salary 
