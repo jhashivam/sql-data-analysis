@@ -103,20 +103,54 @@ WHERE
 ```
 11. Extract all individuals from the "employees" table whose first name contains "Jack".
 ```sql
-
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    first_name LIKE ('jack%');
 ```
 12. Extract list containing the names of employees that do not contain "Jack".
 ```sql
-
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    first_name NOT LIKE ('jack%');
 ```
 13. Select all the information from the "salaries" table regarding contracts from 66,000 to 70,000 dollars per year.
+```sql
+
+```
 14. Retrieve a list with all individuals whose employee number is not between "10004" and "10012".
+```sql
+
+```
 15. Select the names of all departments with numbers between "d003" and "d006".
+```sql
+
+```
 16. Select the names of all departments whose department number value is not null.
+```sql
+
+```
 17. Retrieve a list with data about all female employees who were hired in the year 2000 or after.
+```sql
+
+```
 18. Extract a list with all employees' salaries higher than $150,000 per annum.
+```sql
+
+```
 19. Obtain a list with all different "hire dates" from the "employees" table.
+```sql
+
+```
 20. How many annual contracts with a value higher than or equal to $100,000 have been registered in the salaries table?
+```sql
+
+```
 21. How many managers do we have in the “employees” database?
 22. Select all data from the "employees" table, ordering it by "hire date" in descending order.
 23. Write a query that obtains two columns. The first column must contain annual salaries higher than 80,000 dollars. 
