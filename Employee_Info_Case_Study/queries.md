@@ -218,7 +218,13 @@ ORDER BY salary;
 ``` 
 24. Select all employees whose average salary is higher than $120,000 per annum.
 ```sql
-
+SELECT 
+    emp_no, AVG(salary) AS salary_count
+FROM
+    salaries
+GROUP BY emp_no
+HAVING AVG(salary) > 120000
+ORDER BY emp_no;
 ```
 25. Select the first 100 rows from the 'dept_emp' table.
 ```sql
@@ -257,12 +263,6 @@ ORDER BY salary;
 
 ```sql
 
-  22. select * from employees order by hire_date DESC;
-  23. select 
-        salary, count(salary) as emps_with_same_salary 
-        from salaries 
-        group by salary having salary > 80000 
-        Order by salary;
   24. select * from dempt_emp limit 100;
   25. insert into employees values (999903, "1977-09-14", "Johnathan", "Creek", "M", "1999-01-01"); 
   26. insert into titles values (999903, "Senior Engineer", "1997-10-01", "9999-01-01");
