@@ -1,6 +1,6 @@
 1. Select the information from the "dept_no" column of the "departments" table. Select all data from the "departments" table.
 
-```
+```sql
 SELECT 
     dept_no
 FROM
@@ -14,7 +14,7 @@ FROM
 ```
 
 2. Select all people from the "employees" table whose first name is "Elvis".
-```
+```sql
 SELECT 
     *
 FROM
@@ -24,7 +24,7 @@ WHERE
 
 ```
 3. Retrieve a list with all female employees whose first name is Kellie.
-```
+```sql
 SELECT 
     *
 FROM
@@ -35,7 +35,7 @@ WHERE
 
 ```
 4. Retrieve a list with all employees whose first name is either Kellie or Aruna.
-```
+```sql
 SELECT 
     *
 FROM
@@ -46,7 +46,7 @@ WHERE
 
 ```
 5. Retrieve a list with all female employees whose first name is either Kellie or Aruna.
-```
+```sql
 SELECT 
     *
 FROM
@@ -56,7 +56,7 @@ WHERE
         OR first_name = 'Aruna') AND gender = 'F';
 ```
 6. Use the IN operator to select all individuals from the “employees” table, whose first name is either “Denis”, or “Elvis”.
-```
+```sql
 SELECT 
     *
 FROM
@@ -65,27 +65,33 @@ WHERE
     first_name IN ("Denis","Elvis");
 ```
 7. Extract all records from the ‘employees’ table, aside from those with employees named John, Mark, or Jacob.
-```
-
+```sql
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    first_name NOT IN ('John' , 'Mark', 'Jacob');
+    
 ```
 8. Select the data about all individuals, whose first name starts with "Mark", specify that the name can be succeeded by any sequence of characters.
-```
+```sql
 
 ```
 9. Retrieve a list with all employees who have been hired in the year 2000.
-```
+```sql
 
 ```
 10. Retrieve a list with all employees whose employee number is written with 5 characters, and starts with "1000".
-```
+```sql
 
 ```
 11. Extract all individuals from the "employees" table whose first name contains "Jack".
-```
+```sql
 
 ```
 12. Extract list containing the names of employees that do not contain "Jack".
-```
+```sql
 
 ```
 13. Select all the information from the "salaries" table regarding contracts from 66,000 to 70,000 dollars per year.
