@@ -76,15 +76,30 @@ WHERE
 ```
 8. Select the data about all individuals, whose first name starts with "Mark", specify that the name can be succeeded by any sequence of characters.
 ```sql
-
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    first_name LIKE ('MarK%');
 ```
 9. Retrieve a list with all employees who have been hired in the year 2000.
 ```sql
-
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    hire_date LIKE ('2000%');
 ```
 10. Retrieve a list with all employees whose employee number is written with 5 characters, and starts with "1000".
 ```sql
-
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    emp_no LIKE ('1000_');
 ```
 11. Extract all individuals from the "employees" table whose first name contains "Jack".
 ```sql
