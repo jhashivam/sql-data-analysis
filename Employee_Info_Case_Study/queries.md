@@ -228,18 +228,71 @@ ORDER BY emp_no;
 ```
 25. Select the first 100 rows from the 'dept_emp' table.
 ```sql
-
+select * from dempt_emp limit 100;
 ```
 26. Task 1:
     a. Select ten records from the “titles” table to get a better idea about its content.
     b. Then, in the same table, insert information about employee number 999903. State that he/she is a “Senior Engineer”, who has started working in this position on October 1st, 1997.
     c. At the end, sort the records from the “titles” table in descending order to check if you have successfully inserted the new record.
+```sql
+SELECT 
+    *
+FROM
+    titles
+LIMIT 10;
+
+INSERT INTO employees 
+(
+emp_no,
+birth_date, 
+first_name, 
+last_name, 
+gender, 
+hire_date
+)
+VALUES
+(999903,
+"1977-09-14",
+ "Johnathan",
+ "Creek",
+ "M",
+ "1999-01-01"
+ ); 
+
+INSERT INTO titles
+(
+emp_no,
+title,
+from_date,
+to_date
+)
+VALUES
+(
+999903,
+'Senior Engineer',
+'1999-01-01',
+'2000-12-01'
+);
+
+```
 27. Task 2:
     a. Insert information about the individual with employee number 999903 into the “dept_emp” table. 
     b. He/She is working for department number 5, and has started work on October 1st, 1997; her/his contract is for an indefinite period of time.
+```sql
+
+```
 28. Create a new department called "Business Analysis". Register it under number "d010".
+```sql
+
+```
 29. Change the "Business Analysis" department name to "Data Analysis".
+```sql
+
+```
 30. Remove the department number 10 record from the "departments" table.
+```sql
+
+```
 31. How many departments are there in the "employees" database?
 32. What is the total amount of money spent on salaries for all contracts starting after the 1st of January 1997?
 33. Which is the lowest employee number in the database?
