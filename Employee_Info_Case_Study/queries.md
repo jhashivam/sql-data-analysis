@@ -243,35 +243,36 @@ LIMIT 10;
 
 INSERT INTO employees 
 (
-emp_no,
-birth_date, 
-first_name, 
-last_name, 
-gender, 
-hire_date
+    emp_no,
+    birth_date, 
+    first_name, 
+    last_name, 
+    gender, 
+    hire_date
 )
 VALUES
-(999903,
-"1977-09-14",
- "Johnathan",
- "Creek",
- "M",
- "1999-01-01"
+(
+    999903,
+    "1977-09-14",
+    "Johnathan",
+    "Creek",
+    "M",
+    "1999-01-01"
  ); 
 
 INSERT INTO titles
 (
-emp_no,
-title,
-from_date,
-to_date
+    emp_no,
+    title,
+    from_date,
+    to_date
 )
 VALUES
 (
-999903,
-'Senior Engineer',
-'1999-01-01',
-'2000-12-01'
+    999903,
+    'Senior Engineer',
+    '1999-01-01',
+    '2000-12-01'
 );
 
 ```
@@ -279,11 +280,27 @@ VALUES
     a. Insert information about the individual with employee number 999903 into the “dept_emp” table. 
     b. He/She is working for department number 5, and has started work on October 1st, 1997; her/his contract is for an indefinite period of time.
 ```sql
-
+INSERT INTO dept_emp
+values 
+(
+	999903, 
+	"d005", 
+	"1991-10-01", 
+	"9999-01-01"
+);  
 ```
 28. Create a new department called "Business Analysis". Register it under number "d010".
 ```sql
-
+INSERT INTO departments
+(
+    dept_no,
+    dept_name
+)
+VALUES
+(
+    'd010',
+    'Business Analysis'
+);
 ```
 29. Change the "Business Analysis" department name to "Data Analysis".
 ```sql
@@ -320,8 +337,8 @@ VALUES
   25. insert into employees values (999903, "1977-09-14", "Johnathan", "Creek", "M", "1999-01-01"); 
   26. insert into titles values (999903, "Senior Engineer", "1997-10-01", "9999-01-01");
   27. select * from titles order by from_date DESC;
-  28. insert into dept_emp values (999903, "d005", "1991-10-01", "9999-01-01");  
-  29. insert into departments values ("d010", "Business Analysis");
+
+
   30. update departments set dept_name = "Data Analysis" where dept_no = "d010";
   31. delete from departments where dept_no = "d010";
   32. select count(distinct dept_no) from dept_emp;
