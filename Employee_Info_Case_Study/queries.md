@@ -304,22 +304,56 @@ VALUES
 ```
 29. Change the "Business Analysis" department name to "Data Analysis".
 ```sql
-
+UPDATE departments 
+SET 
+    dept_name = 'Data Analysis'
+WHERE
+    dept_no = 'd010';
 ```
 30. Remove the department number 10 record from the "departments" table.
 ```sql
 
 ```
 31. How many departments are there in the "employees" database?
+```sql
+
+```
 32. What is the total amount of money spent on salaries for all contracts starting after the 1st of January 1997?
+```sql
+
+```
 33. Which is the lowest employee number in the database?
+```sql
+
+```
 34. Which is the highest employee number in the database?
+```sql
+
+```
 35. What is the average annual salary paid to employees who started after the 1st of January 1997?
+```sql
+
+```
 36. Round the average amount of money spent on salaries for all contracts that started after the 1st of January 1997 to a precision of cents.
+```sql
+
+```
 37. Select the department number and name from the ‘departments_dup’ table and add a third column where you name the department number (‘dept_no’) as ‘dept_info’. If ‘dept_no’ does not have a value, use ‘dept_name’.
+```sql
+
+```
 38. Modify the code obtained from the previous question in the following way. Apply the IFNULL() function to the values from the first and second column, so that ‘N/A’ is displayed whenever a department number has no value, and ‘Department name not provided’ is shown if there is no value for ‘dept_name’.
+```sql
+
+```
 39. Extract a list containing information about all managers' employee number, first and last name, department number, and hire date.
-40. Join the 'employees' and the 'dept_manager' tables to return a subset of all the employees whose last name is Markovitch. 
+```sql
+
+```
+40. Join the 'employees' and the 'dept_manager' tables to return a subset of all the employees whose last name is Markovitch.
+```sql
+
+```
 41. Select the first and last name, the hire date, and the job title of all employees whose first name is "Margareta" and have the last name "Markovitch".
 42. Use a CROSS JOIN to return a list with all possible combinations between managers from the dept_manager table and department number 9.
 43. How many male and how many female managers do we have in the "employees" database?
@@ -332,14 +366,6 @@ VALUES
 50. Extract a dataset containing the following information about the managers: employee number, first name, and last name. Add two columns at the end – one showing the difference between the maximum and minimum salary of that employee, and another one saying whether this salary raise was higher than $30,000 or NOT.
 
 ```sql
-
-  24. select * from dempt_emp limit 100;
-  25. insert into employees values (999903, "1977-09-14", "Johnathan", "Creek", "M", "1999-01-01"); 
-  26. insert into titles values (999903, "Senior Engineer", "1997-10-01", "9999-01-01");
-  27. select * from titles order by from_date DESC;
-
-
-  30. update departments set dept_name = "Data Analysis" where dept_no = "d010";
   31. delete from departments where dept_no = "d010";
   32. select count(distinct dept_no) from dept_emp;
   33. select sum(salary) from salaries where from_date > "1997-01-01";
