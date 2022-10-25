@@ -316,9 +316,12 @@ DELETE FROM departments
 WHERE
     dept_no = 'd010';
 ```
-31. How many departments are there in the "employees" database?
+31. How many departments are there in the "employees" database? Use the "dept_emp" table
 ```sql
-
+SELECT 
+  COUNT(DISTINCT dept_no)
+FROM
+    dept_emp;
 ```
 32. What is the total amount of money spent on salaries for all contracts starting after the 1st of January 1997?
 ```sql
@@ -368,8 +371,7 @@ WHERE
 50. Extract a dataset containing the following information about the managers: employee number, first name, and last name. Add two columns at the end – one showing the difference between the maximum and minimum salary of that employee, and another one saying whether this salary raise was higher than $30,000 or NOT.
 
 ```sql
-  31. delete from departments where dept_no = "d010";
-  32. select count(distinct dept_no) from dept_emp;
+
   33. select sum(salary) from salaries where from_date > "1997-01-01";
   34. select emp_no from employees order by emp_no limit 1;
   35. select emp_no from employees order by emp_no desc limit 1;
