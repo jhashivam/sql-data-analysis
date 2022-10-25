@@ -312,7 +312,9 @@ WHERE
 ```
 30. Remove the department number 10 record from the "departments" table.
 ```sql
-
+DELETE FROM departments 
+WHERE
+    dept_no = 'd010';
 ```
 31. How many departments are there in the "employees" database?
 ```sql
