@@ -325,15 +325,26 @@ FROM
 ```
 32. What is the total amount of money spent on salaries for all contracts starting after the 1st of January 1997?
 ```sql
-
+SELECT 
+    SUM(salary)
+FROM
+    salaries
+WHERE
+    from_date > '1997-01-01';
 ```
 33. Which is the lowest employee number in the database?
 ```sql
-
+SELECT 
+    MIN(emp_no)
+FROM
+    employees;
 ```
 34. Which is the highest employee number in the database?
 ```sql
-
+SELECT 
+    MAX(emp_no)
+FROM
+    employees;
 ```
 35. What is the average annual salary paid to employees who started after the 1st of January 1997?
 ```sql
@@ -372,9 +383,8 @@ FROM
 
 ```sql
 
-  33. select sum(salary) from salaries where from_date > "1997-01-01";
-  34. select emp_no from employees order by emp_no limit 1;
-  35. select emp_no from employees order by emp_no desc limit 1;
+
+
   36. select avg(salary) from salaries where from_date > "1997-01-01";
   37. select round(avg(salary),2) from salaries where from_date > "1997-01-01";
   38. select 
