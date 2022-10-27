@@ -348,11 +348,21 @@ FROM
 ```
 35. What is the average annual salary paid to employees who started after the 1st of January 1997?
 ```sql
-
+SELECT 
+    AVG(salary)
+FROM
+    salaries
+WHERE
+    from_date > '1997-01-01';
 ```
 36. Round the average amount of money spent on salaries for all contracts that started after the 1st of January 1997 to a precision of cents.
 ```sql
-
+SELECT 
+    ROUND(AVG(salary), 2)
+FROM
+    salaries
+WHERE
+    from_date > '1997-01-01';
 ```
 37. Select the department number and name from the ‘departments_dup’ table and add a third column where you name the department number (‘dept_no’) as ‘dept_info’. If ‘dept_no’ does not have a value, use ‘dept_name’.
 ```sql
@@ -383,10 +393,6 @@ FROM
 
 ```sql
 
-
-
-  36. select avg(salary) from salaries where from_date > "1997-01-01";
-  37. select round(avg(salary),2) from salaries where from_date > "1997-01-01";
   38. select 
         dept_no, dept_name, coalesce(dept_no, dept_name) as dept_info 
         from departments_dup 
